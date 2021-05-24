@@ -5,6 +5,17 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'angular-tour-of-heroes';
+  title = 'Tour of Heroes';
+  formatLabel(value: number) {
+    if (value >= 1000) {
+      return Math.round(value / 1000) + 'k';
+    }
+
+    return value;
 }
+
+}
+
+
